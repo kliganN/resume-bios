@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'NDS Bios';
+  src: url('/fonts/NDS-Bios.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bios-bg: #0000AA;
+  --bios-text: #FFFFFF;
+  --bios-highlight: #FFFF55;
+  --bios-gray: #AAAAAA;
+  --bios-selected-bg: #AA0000;
+  --bios-selected-text: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bios-bg);
+  color: var(--bios-text);
+  font-family: 'NDS Bios', 'Courier New', Courier, monospace;
+  font-weight: 700;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 16px;
+}
+
+.bios-text {
+  color: var(--bios-text);
+}
+
+.bios-highlight {
+  color: var(--bios-highlight);
+}
+
+.bios-gray {
+  color: var(--bios-gray);
+}
+
+.scanline {
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.15) 51%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+.crt-flicker {
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.97; }
+  50% { opacity: 1; }
+  100% { opacity: 0.98; }
+}
+
+.bios-button {
+  background: transparent;
+  border: 2px solid var(--bios-text);
+  color: var(--bios-text);
+  padding: 10px 20px;
+  font-family: 'NDS Bios', 'Courier New', Courier, monospace;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+}
+
+.bios-button:hover,
+.bios-button.active {
+  background: var(--bios-selected-bg);
+  color: var(--bios-selected-text);
+  border-color: var(--bios-selected-text);
+}
+
+.bios-border {
+  border: 3px solid var(--bios-text);
+}
+
+.bios-link {
+  color: var(--bios-highlight);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.bios-link:hover {
+  background: var(--bios-selected-bg);
+  color: var(--bios-selected-text);
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--bios-selected-bg);
+  color: var(--bios-text);
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bios-bg);
+  border-left: 3px solid var(--bios-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bios-text);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bios-highlight);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+p, li, span, div {
+  font-weight: 700;
+}
