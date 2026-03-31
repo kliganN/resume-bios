@@ -45,6 +45,10 @@ body {
   color: var(--bios-highlight);
 }
 
+.bios-progress-fill {
+  background-color: var(--bios-highlight);
+}
+
 .bios-gray {
   color: var(--bios-gray);
 }
