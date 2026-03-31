@@ -470,7 +470,7 @@ export default function Home() {
     return (
       <div
         className="min-h-screen bg-[#0000AA] p-8 crt-flicker"
-        style={{ fontFamily: "'NDS Bios', 'Courier New', monospace", fontSize: 18, fontWeight: 700 }}
+        style={{ fontFamily: "'NDS Bios', 'Courier New', monospace", fontSize: 20, fontWeight: 700 }}
       >
         <Head>
           <title>RESUME.OS - Boot Sequence</title>
@@ -492,7 +492,7 @@ export default function Home() {
   return (
     <div
       className="min-h-screen bg-[#0000AA] crt-flicker relative"
-      style={{ fontFamily: "'NDS Bios', 'Courier New', monospace", fontSize: 18, fontWeight: 700 }}
+      style={{ fontFamily: "'NDS Bios', 'Courier New', monospace", fontSize: 20, fontWeight: 700 }}
     >
       <Head>
         <title>RESUME.OS | Гордеев Владимир Сергеевич</title>
