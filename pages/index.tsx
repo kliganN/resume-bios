@@ -40,7 +40,6 @@ type CaseEntry = {
   title: string
   subtitle: string
   description: string
-  status: string
 }
 
 type EducationEntry = {
@@ -156,21 +155,18 @@ const caseItems: CaseEntry[] = [
     subtitle: 'Grafana + ClickHouse + ELK',
     description:
       'Сбор, агрегация и визуализация метрик Android-устройств для ускорения диагностики инцидентов и анализа состояния парка.',
-    status: 'PRODUCTION',
   },
   {
     title: 'PROXMOX MIGRATION',
     subtitle: 'Virtualization rollout',
     description:
       'Перенос физических серверов в виртуальную среду Proxmox с настройкой ВМ, LVM и базовой отказоустойчивости.',
-    status: 'DELIVERED',
   },
   {
     title: 'WAREHOUSE MESH NETWORK',
     subtitle: 'Wireless infrastructure from scratch',
     description:
       'Проектирование топологии и развёртывание Mesh-сети на складе для стабильной работы ТСД и рабочих станций.',
-    status: 'ONLINE',
   },
 ]
 
@@ -272,7 +268,7 @@ function SkillGroupPanel({ group }: { group: SkillGroup }) {
               <span className="bios-gray">{item.level}%</span>
             </div>
             <div className="h-4 border bios-border mt-1" style={{ borderColor: '#AAAAAA' }}>
-              <div className="bios-highlight h-full" style={{ width: `${item.level}%` }}></div>
+              <div className="bios-progress-fill h-full" style={{ width: `${item.level}%` }}></div>
             </div>
           </div>
         ))}
@@ -287,7 +283,6 @@ function CaseCard({ item }: { item: CaseEntry }) {
       <p className="bios-highlight">{item.title}</p>
       <p className="bios-gray">{item.subtitle}</p>
       <p className="mt-2">{item.description}</p>
-      <p className="bios-highlight mt-2">[STATUS: {item.status}]</p>
     </div>
   )
 }
@@ -513,7 +508,7 @@ export default function Home() {
         <header className="bios-border p-4 mb-4">
           <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
             <div>
-              <h1 className="bios-highlight text-xl">RESUME.OS v1.0.0</h1>
+              <h1 className="bios-highlight text-xl">Resume Page GORDEEV V.S.</h1>
               <p className="bios-gray">BIOS Version 1.0.0 - Linux Sysadmin Edition</p>
             </div>
             <div className="text-left md:text-right">
