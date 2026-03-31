@@ -1,10 +1,3 @@
-@font-face {
-  font-family: 'NDS Bios';
-  src: url('/fonts/NDS-Bios.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,7 +21,6 @@ body {
   padding: 0;
   background-color: var(--bios-bg);
   color: var(--bios-text);
-  font-family: 'NDS Bios', 'Courier New', Courier, monospace;
   font-weight: 700;
   overflow-x: hidden;
 }
@@ -78,7 +70,7 @@ body {
   border: 2px solid var(--bios-text);
   color: var(--bios-text);
   padding: 10px 20px;
-  font-family: 'NDS Bios', 'Courier New', Courier, monospace;
+  font-family: inherit;
   font-weight: 700;
   cursor: pointer;
   text-transform: uppercase;
